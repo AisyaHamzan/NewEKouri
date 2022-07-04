@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginEnd="20dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/cart_background"
+    android:elevation="3dp">
+
+    <ImageView
+        android:id="@+id/picCart"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/p_bawal" />
+
+    <TextView
+        android:id="@+id/titleTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="title"
+        android:textColor="#373b54"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/picCart"
+        app:layout_constraintTop_toTopOf="@+id/picCart" />
+
+
+    <TextView
+        android:id="@+id/numberItemTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="1"
+        android:textColor="#373b54"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/picCart"
+        app:layout_constraintTop_toBottomOf="@+id/titleTxt"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <TextView
+        android:id="@+id/darab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="x"
+        android:textColor="#373b54"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/numberItemTxt"
+        app:layout_constraintTop_toBottomOf="@+id/titleTxt"
+        app:layout_constraintVertical_bias="0.2" />
+
+
+    <TextView
+        android:id="@+id/feeEachItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="32dp"
+        android:text="0"
+        android:textColor="#373b54"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/darab" />
+
+    <ImageView
+        android:id="@+id/delete"
+        android:layout_width="25dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="16dp"
+
+        android:src="@drawable/delete"
+        app:layout_constraintBottom_toTopOf="@+id/textView21"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.853"
+        app:layout_constraintStart_toEndOf="@+id/titleTxt" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="RM"
+        android:textColor="#ff3d00"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.751"
+        app:layout_constraintStart_toEndOf="@+id/numberItemTxt" />
+
+    <TextView
+        android:id="@+id/totalEachItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="16dp"
+        android:text="0"
+        android:textColor="#373b54"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView21" />
+</androidx.constraintlayout.widget.ConstraintLayout>

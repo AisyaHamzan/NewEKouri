@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "572292788496",
+    "project_id": "myekouri",
+    "storage_bucket": "myekouri.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:572292788496:android:b8717c64ed93d31af83595",
+        "android_client_info": {
+          "package_name": "com.example.myekouri"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "572292788496-qgld8o3pdtnfovb3p2uh5apcpngp6qt8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myekouri",
+            "certificate_hash": "cb2ac7a0a416432d58efb73c4a18b97593f552c1"
+          }
+        },
+        {
+          "client_id": "572292788496-fh3q85kltafh752lj78e5ev8d0jko9on.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaetdnYsMUV7-v7ZvNUXg6dFkPDdx1PQk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "572292788496-fh3q85kltafh752lj78e5ev8d0jko9on.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

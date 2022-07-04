@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.AddProductActivity"
+    android:background="#FFFFFFFF"
+    android:fillViewport="true"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="Muat Naik dan Kemaskini Produk"
+            android:textSize="18sp"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:id="@+id/proImg"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/profile"
+            android:transitionName="logo_image"
+            android:layout_gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="410dp"
+            android:layout_height="410dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/proName"
+                android:layout_width="348dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:hint="Nama Produk"
+                    android:inputType="text" />
+
+            <EditText
+                android:id="@+id/proBrand"
+                android:layout_width="348dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:hint="Jenama"
+                    android:inputType="text" />
+
+
+            <EditText
+                android:id="@+id/proDesc"
+                android:layout_width="348dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="Butiran"
+                android:layout_marginTop="8dp"
+                android:inputType="text" />
+
+
+            <EditText
+                android:id="@+id/proPrice"
+                android:layout_width="348dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="Harga"
+                android:layout_marginTop="8dp"
+                android:inputType="number" />
+
+
+           <EditText
+                android:id="@+id/proCategory"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="348dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="Kategori"
+               android:layout_marginTop="8dp"
+               android:drawableEnd="@drawable/down"
+                    android:inputType="text" />
+
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="102dp"/>
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/updateBtn"
+            android:layout_width="219dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#FF000000"
+            android:text="Muat Naik dan Kemaskini"
+            android:textColor="#FFFFFFFF" />
+
+    </LinearLayout>
+
+
+
+</androidx.core.widget.NestedScrollView>

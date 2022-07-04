@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.SellerSignUpActivity"
+    android:background="#FFFFFFFF"
+    android:fillViewport="true"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/newlogo2"
+            android:transitionName="logo_image" />
+
+        <TextView
+            android:id="@+id/hello"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-20dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Selamat Datang"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="Daftar masuk"
+            android:textSize="18sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/regName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="348dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="Nama Kedai">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="348dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/regEmail"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="348dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="E-mel">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="348dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/regAddress"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="348dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="Alamat">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="348dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/regPhoneNo"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="348dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="Telefon">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="348dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/regUsername"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="348dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="Nama Pengguna"
+                app:counterEnabled="true"
+                app:counterMaxLength="15">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="348dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/regPassword"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="348dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="Kata Laluan"
+                app:passwordToggleEnabled="true">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="348dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/confirPassword"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="348dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="Sahkan Kata Laluan"
+                app:passwordToggleEnabled="true">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="348dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/SignUp_Btn"
+            android:layout_width="219dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#FF000000"
+            android:text="Daftar masuk"
+            android:textColor="#FFFFFFFF" />
+
+        <Button
+            android:id="@+id/ToLogin_Btn"
+            android:layout_width="219dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#00000000"
+            android:text="Sudah mempunyai akaun? Log masuk"
+            android:textColor="#FF000000" />
+    </LinearLayout>
+
+
+
+</androidx.core.widget.NestedScrollView>

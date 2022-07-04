@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+android:layout_height="wrap_content"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:layout_marginStart="16dp"
+android:layout_marginTop="10dp"
+android:layout_marginEnd="16dp"
+android:layout_marginBottom="10dp"
+android:background="@drawable/cart_background"
+android:elevation="3dp">
+
+<ImageView
+    android:id="@+id/proPic"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_marginStart="4dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/p_bawal" />
+
+<TextView
+    android:id="@+id/proName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="4dp"
+    android:layout_marginTop="16dp"
+    android:text="name"
+    android:textColor="#373b54"
+    android:textSize="18sp"
+    android:textStyle="bold"
+    app:layout_constraintStart_toEndOf="@+id/proPic"
+    app:layout_constraintTop_toTopOf="@+id/proPic" />
+
+
+    <TextView
+        android:id="@+id/proPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="#373b54"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/textView19"
+        app:layout_constraintTop_toTopOf="@+id/textView19" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RM"
+        android:textColor="#ff3d00"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/proName"
+        app:layout_constraintStart_toEndOf="@+id/proPic"
+        app:layout_constraintTop_toBottomOf="@+id/proName" />
+
+    <ImageView
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/next"
+        android:text="RM"
+        android:textColor="#ff3d00"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.993"
+        app:layout_constraintTop_toBottomOf="@+id/textView19"
+        app:layout_constraintVertical_bias="0.923" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
