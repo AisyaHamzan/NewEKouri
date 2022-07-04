@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -70,9 +71,20 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerViewSearch = findViewById(R.id.searchRecView);
         recyclerViewSearch.setHasFixedSize(true);
-        recyclerViewSearch.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL,false));
+        recyclerViewSearch.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
         allProductDomainList = new ArrayList<>();
-        allProductAdapter = new AllProductAdapter(this,allProductDomainList);
+        allProductAdapter = new AllProductAdapter(this, allProductDomainList);
+        recyclerViewSearch.setAdapter(allProductAdapter);
+
+        mStore.collection("Product").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if (task.isSuccessful()) {
+                    allProductDomainList.addAll(task.getResult().toObjects(AllProductDomain.class));
+                }
+            }
+        });
+
         searchView = findViewById(R.id.search);
         searchView.clearFocus();
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -162,22 +174,30 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
-} 
+    }
 
     private void filterList(String text) {
+        if (text.isEmpty()) {
+            recyclerViewSearch.setVisibility(View.GONE);
+            return;
+        }
+
         List<AllProductDomain> filteredList = new ArrayList<>();
-        for( AllProductDomain allProductDomain : allProductDomainList){
-            if(allProductDomain.getName().toLowerCase().contains(text.toLowerCase())){
+        for (AllProductDomain allProductDomain : allProductDomainList) {
+            if (allProductDomain.getName().toLowerCase().contains(text.toLowerCase())) {
                 filteredList.add(allProductDomain);
             }
         }
-        if(filteredList.isEmpty()){
-            Toast.makeText(this,"Tiada produk ditemui",Toast.LENGTH_SHORT).show();
-        }else{
+
+        if (filteredList.isEmpty()) {
+            recyclerViewSearch.setVisibility(View.GONE);
+            Toast.makeText(this, "Tiada produk ditemui", Toast.LENGTH_SHORT).show();
+        } else {
             allProductAdapter.setFilteredList(filteredList);
+            allProductAdapter.notifyDataSetChanged();
+            recyclerViewSearch.setVisibility(View.VISIBLE);
         }
     }
-
 
 
     private void bottomNavigation() {
@@ -218,7 +238,7 @@ public class MainActivity extends AppCompatActivity {
         logoutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this,LoginActivity.class));
+                startActivity(new Intent(MainActivity.this, LoginActivity.class));
             }
         });
 
